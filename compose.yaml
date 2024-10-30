@@ -1,0 +1,16 @@
+services:
+  app:
+    build:
+      context: .
+    image: travel
+    ports:
+      - "3000:3000"
+    develop:
+      watch:
+        - action: sync
+          path: ./src
+          target: /app/src
+          ignore:
+            - node_modules/
+        - action: rebuild
+          path: package.json
