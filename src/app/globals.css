@@ -5,3 +5,7 @@
 body {
   font-family: var(--gilda-display);
 }
+
+html {
+  scroll-behavior: smooth;
+}
