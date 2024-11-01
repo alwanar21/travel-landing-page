@@ -22,24 +22,24 @@ export default function Footer() {
         </div>
         <div className='mx-auto w-full max-w-[1284px] px-5 md:items-end md:justify-between md:px-8 lg:flex lg:flex-row'>
           <div className=''>
-            <h3 className='text-body-tablet-16 font-semibold text-app-brand-500'>
+            <h3 className='text-body-tablet-16 font-semibold text-app-brand-500 sm:text-[28px]'>
               Travel
             </h3>
-            <p className='max-w-[313px] pb-[28px] pt-4 font-urbanist text-body-tablet-16 font-medium text-app-neutral-700'>
+            <p className='max-w-[50%] pb-[28px] pt-4 font-urbanist text-body-tablet-16 font-medium text-app-neutral-700 sm:text-body-desktop-18'>
               The best travel agent in the world. Contact us immediatly now!
               Lorem ipsum dolor sit amet, consectetur adipisicing elit.
               Assumenda officia aliquid consectetur?
             </p>
             <div className='flex flex-row items-center justify-between'>
               <div className='flex flex-row items-center justify-center gap-4'>
-                <button className='bg-app-brand-100 group flex h-10 w-10 items-center justify-center rounded-full duration-500 hover:bg-app-brand-600'>
-                  <FaInstagram className='group-hover:text-app-brand-100 h-[21px] w-[21px] text-app-brand-600' />
+                <button className='group flex h-10 w-10 items-center justify-center rounded-full bg-app-brand-100 duration-500 hover:bg-app-brand-600'>
+                  <FaInstagram className='h-[21px] w-[21px] text-app-brand-600 group-hover:text-app-brand-100' />
                 </button>
-                <button className='bg-app-brand-100 group flex h-10 w-10 items-center justify-center rounded-full duration-500 hover:bg-app-brand-600'>
-                  <FaTwitter className='group-hover:text-app-brand-100 h-[21px] w-[21px] text-app-brand-600' />
+                <button className='group flex h-10 w-10 items-center justify-center rounded-full bg-app-brand-100 duration-500 hover:bg-app-brand-600'>
+                  <FaTwitter className='h-[21px] w-[21px] text-app-brand-600 group-hover:text-app-brand-100' />
                 </button>
-                <button className='bg-app-brand-100 group flex h-10 w-10 items-center justify-center rounded-full duration-500 hover:bg-app-brand-600'>
-                  <FaYoutube className='group-hover:text-app-brand-100 h-[21px] w-[21px] text-app-brand-600' />
+                <button className='group flex h-10 w-10 items-center justify-center rounded-full bg-app-brand-100 duration-500 hover:bg-app-brand-600'>
+                  <FaYoutube className='h-[21px] w-[21px] text-app-brand-600 group-hover:text-app-brand-100' />
                 </button>
               </div>
               <Link
@@ -57,7 +57,7 @@ export default function Footer() {
             >
               <IoIosArrowUp className='h-[21px] w-[21px] text-app-white-100' />
             </Link>
-            <ul className='mx-auto mt-[42px] flex max-w-[463px] flex-row justify-between gap-[28px] font-urbanist sm:mb-3 lg:mx-0'>
+            <ul className='mx-auto mt-[42px] flex max-w-[463px] flex-row flex-wrap justify-between gap-x-[28px] gap-y-2 font-urbanist sm:mb-3 lg:mx-0'>
               <li className='text-body-mobile-15 font-semibold text-app-neutral-700'>
                 Home
               </li>
