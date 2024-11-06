@@ -41,6 +41,7 @@ export default function Reason() {
               variants={fadeIn('down', index * 0.15)}
               whileInView={'show'}
               viewport={{ once: true, amount: 0.4 }}
+              className='h-full'
             >
               <div className='group flex h-full flex-col border-t-4 border-t-app-brand-600 px-5 pb-[32px] pt-[28px] duration-500 ease-in-out hover:bg-app-brand-600'>
                 <h2 className='text-header-mobile-2 font-semibold text-app-neutral-900 group-hover:text-app-white-100 lg:text-header-desktop-2'>
