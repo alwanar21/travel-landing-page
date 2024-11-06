@@ -1,4 +1,7 @@
+'use client';
+import { fadeIn } from '@/animations/FadeIn';
 import { destinations } from '@/data/destination';
+import { motion } from 'framer-motion';
 import Image, { StaticImageData } from 'next/image';
 import { HiOutlineLocationMarker } from 'react-icons/hi';
 import { RiSearchLine } from 'react-icons/ri';
@@ -16,10 +19,22 @@ export default function Destination() {
       <div className='mx-auto flex max-w-[1284px] flex-col gap-[28px] px-5 py-[80px] sm:gap-[60px] sm:px-8 sm:py-[100px]'>
         {/* top */}
         <div className='flex flex-col gap-4 md:flex-row md:items-center md:justify-between'>
-          <h5 className='text-header-mobile-1 text-app-neutral-900 sm:text-header-desktop-1'>
+          <motion.h5
+            initial='hidden'
+            variants={fadeIn('down', 0)}
+            whileInView={'show'}
+            viewport={{ once: true, amount: 0.7 }}
+            className='text-header-mobile-1 text-app-neutral-900 sm:text-header-desktop-1'
+          >
             Find your best destination
-          </h5>
-          <div className='flex flex-col gap-6'>
+          </motion.h5>
+          <motion.div
+            initial='hidden'
+            variants={fadeIn('down', 0.4)}
+            whileInView={'show'}
+            viewport={{ once: true, amount: 1 }}
+            className='flex flex-col gap-6'
+          >
             <p className='font-urbanist text-body-tablet-16 text-app-neutral-700'>
               We have more than{' '}
               <span className='text-app-neutral-900'>1000+ </span>
@@ -38,14 +53,18 @@ export default function Destination() {
                 <RiSearchLine className='h-6 w-6 text-white' />
               </button>
             </div>
-          </div>
+          </motion.div>
         </div>
         {/* bottom */}
         <div className='grid gap-11 sm:grid-cols-2 lg:grid-cols-3'>
           {destinations.map((item: destinations, index) => (
-            <div
-              className='flex w-full flex-col gap-[28px] border-[1px] border-[#F2F2F2] p-4 shadow-md'
+            <motion.div
               key={index}
+              initial='hidden'
+              variants={fadeIn('down', index * 0.15)}
+              whileInView={'show'}
+              viewport={{ once: true, amount: 0.4 }}
+              className='flex w-full flex-col gap-[28px] border-[1px] border-[#F2F2F2] p-4 shadow-md'
             >
               <div className='w-full bg-red-200'>
                 <Image
@@ -65,7 +84,7 @@ export default function Destination() {
                   </p>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
